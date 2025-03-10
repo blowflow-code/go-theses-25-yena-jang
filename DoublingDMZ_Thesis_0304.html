@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>DoublingDMZ_Thesis_0304</title>
+    <!-- 외부 CSS 파일 연결 -->
+    <link rel="icon" href="Media/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/qny3gla.css">
+  <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- 구글 폰트 Noto Serif 적용 -->
+    <link rel="stylesheet" href="https://use.typekit.net/qny3gla.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <script src="wrapWords.js" defer></script>
+    <script src="selectionchange.js"></script>
+
+    <script src="nav.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/color-thief@2.3.2/dist/color-thief.umd.js"></script> -->
+    <!-- <script src="colorthief.js" defer></script> -->
+    <script src="Grid.js" defer></script>
+    <script src="scrollsnap.js" defer></script>
+    
+    <!-- <script src="crosshair.js" defer></script> -->
+
+  </head>
+  
+  <body>
+    
+        <!-- 목차 네비게이션 -->
+        <nav aria-label="Table of Contents">
+          <ul>
+            <li class="group-intro"><a href="#introduction">Introduction &amp; Preface</a></li>
+            <li class="group-chapters "><a href="#chapter">Chapter 1</a></li>
+            <li class="group-chapters "><a href="#chapter2">Chapter 2</a></li>
+            <li class="group-chapters "><a href="#chapter3">Chapter 3</a></li>
+            <li class="group-others"><a href="#conclusion">Conclusion</a></li>
+            <li class="group-other"><a href="#bibliography">Bibliography</a></li>
+          </ul>
+        </nav>
+
+    <!-- 문서 헤더 -->
+    <header>
+      <div class="video-wrapper">
+      <h1>Doubling DMZ</h1> 
+    <p style="text-indent: 0;">
+      <strong>Yena Jang</strong><br />
+      <strong>Bachelor Thesis</strong><br />
+      <strong>Royal Academy of Arts, The Hague</strong>
+    </p>
+
+        <video class="portrait" src="media/Video_1.mp4" autoplay muted loop>
+        </video>
+        <video class="landscape" src="media/Video_1.mp4" autoplay muted loop>
+        </video>
+  
+        <div class="crosshair"></div>
+    </div>
+
+    </header>
+
+  
+    <!-- 주요 본문 영역 -->
+    <main>
+      <!-- Introduction & Preface 섹션 -->
+      <article id="intro">
+        <div class="intro-content">
+        <p style="text-indent: 0%;">
+          <b class="bold"><strong>Research question</strong></b><br />
+          The externally depoliticized appearance versus the internally power-laden nature of each space. - How the mechanisms of power have domesticated internet data and wildlife in the DMZ?
+        </p>
+      </div>
+        </article>
+        <br>
+        <p style="text-indent: 0%;">
+          <b class="bold"><strong>Abstract</strong></b><br />
+          This thesis explores the paradoxical nature of "safe zones" by examining how the current form of the Internet reflects the function of the Korean Demilitarized Zone (DMZ). Although both the DMZ and the Internet appear to offer protection, internal political forces render these spaces ambiguous, concealing deep structures of control. Drawing on Michel Foucault's concept of governmentality, the study reveals that these realms—whether physical or digital—are depicted as decentralized havens of peace, yet in reality are highly politicized. Employing a comparative and ecologically oriented perspective, the thesis analyzes data mining practices under AI-driven surveillance capitalism not as isolated technical processes, but as interdependent elements within a larger digital ecosystem. This perspective considers how these practices are influenced and shaped by social, political, and economic forces, understanding them as organisms interacting in a natural environment, and draws parallels between the controlled, propagandistic ecosystem of the DMZ and that of the Internet. Ultimately, this research demonstrates how protective boundaries disguise mechanisms of control and surveillance, advocating for a decolonial approach to both physical and digital spaces in order to dismantle the hidden power dynamics that shape our understanding and experience of security.
+        </p>
+        <br>
+        <p style="text-indent: 0%;">
+          <b class="bold"><strong>Preface</strong></b><br />
+          I have not personally experienced war, yet I have lived in South Korea, a nation that has maintained an armistice for 70 years. From the ruins of conflict, Korea achieved rapid economic growth, but the division-induced tensions between North and South persist. I believe this is not solely Korea's issue but an existential dilemma faced by all beings that inherently establish boundaries and confront each other to survive. My inquiry stems from this 'paradoxical identity of living peacefully on a precarious boundary.' With the rapid advancement of artificial intelligence and the growing influence of the internet, the world is now intertwined into a vast network, blurring the lines between people more than ever. Consequently, this writing naturally leads to an interest in today's 'boundaries.' On one hand, I was born within the national boundary of Korea and have personally felt its reality; on the other, I live as an individual within a transnational network led by the internet and big tech. This piece is a record of my questions and the search for answers. Through this writing, which directly touches upon my identity, I aim to clearly recognize and actively address my inner anxieties, crafting a sort of 'personal manifesto.' Furthermore, I hope this endeavor transcends individual effort, becoming a fragment of interpretation that serves as a 'call to action' for contemporaries who share the experience of living on ambiguous boundaries—especially those who feel anxieties similar to mine. How we piece together the scattered clues in the world will shape the fragments of the future.
+        </p class="bottom-marker">
+      </article>
+      <br>
+      <article id="introduction">
+        <!-- 첫 번째 테이블의 내용을 두 컬럼(본문 + 사이드 노트)으로 재구성 -->
+        <p style="text-indent: 0%;"><b class="bold"><p><strong>Introduction</strong></b></p>
+
+        <div class="Part1 content-with-sidenote">
+
+          <!-- 본문 내용 (왼쪽) -->
+          <div class="main-content">
+            <p>
+              Boundaries are often depicted as walls, but in truth they are far more intricate. A boundary is not simply a line or barrier; it marks where I end and someone else begins. At once, it performs contradictory functions: protection and separation, connection and disconnection. Within this ambiguous duality, we experience both the sense of security that boundaries confer and the anxiety they inevitably generate. Such a dual state of mind formed the backdrop to my upbringing in Seoul—the capital of the world’s last divided nation—at the tail end of the Cold War in the 1990s. In everyday life, the calm and the unease brought about by boundaries would unexpectedly intersect time and again. Here, I want to delve into the truth behind these boundaries.
+            </p>
+            <p class="text-indent">
+              In Korean society, the existence of boundaries is sharply illustrated by the Military Demarcation Line that cuts the peninsula into two. After the Korean War ended in 1945, negotiations established a buffer zone two kilometers to the north and two kilometers to the south of this line, creating what is known as the Demilitarized Zone (United Nations Command et al., 1953, Article 1). The mix of security and anxiety surrounding this boundary goes beyond the mere geographical space of the DMZ and reflects broader political and social circumstances in Korea (Park, 1997). In fact, the DMZ carries two faces: the notion of stability and peace, promoted as a “pristine ecological treasure,” and the specter of threat and conflict, manifested by ongoing military tension and rigorous surveillance (Song, 2022.). As fears of nuclear armament and armed clashes intensify, the DMZ’s “peaceful and ecological” image paradoxically becomes more prominent. Yet behind this green curtain lies the undeniable legacy of war, with layers of remnants and scars accumulated over decades.
+            </p>
+            <p class="text-indent">
+              I encountered this green curtain—long dormant in my subconscious—quite unexpectedly during a morning stroll in park in The Hague, Netherlands. Amid the greenery path barely visible through the dense fog, a tall stiff stem rising from the ground with its tip slightly bowed heads out; trying to blend in among real plants mimicking their appearance. This drooping thing turned out to be an unused fiber-optic internet cable. Ironically, however, it was far more ubiquitous than any actual vegetation covering the entire globe internationally.
+            </p>
+            <p class="text-indent">
+              In the Netherlands, fiber-optic cables sprawl beneath the ground like roots of a vast living organism. These multi-colored cables reflect government policies that assign specific colors to certain internet service providers on each street. Following these roots to their underground hub, one eventually reaches massive data centers housing super-computing machines that emit intense heat. Because these centers handle sensitive tasks of classifying and analyzing data, they remain highly confidential, with even company employees often unaware of their precise locations or identities.
+            </p>
+            <p class="text-indent">
+              For some thirty years now, the Internet’s “warm blessing” has become so integral to our lives that it might as well join sunlight and water as a basic component of our being. On average, people spend over 70% of their day online, though they often do so without even realizing it. Shoshana Zuboff (2019) warns that this deep digital dependence has spawned a new power dynamic known as “surveillance capitalism,” which collects and commercializes human behavior and data without restraint, rapidly Infringing on the entire world through virtual, rather than physical, borders (Zuboff, 2019, p. 21). The Internet may appear to unify the globe, yet in practice it is perpetually segmented by national laws, corporate algorithms, and data regulations (Nissenbaum, 2010). These “digital boundaries” not only determine who has control over personal data but can also restrict access itself for some users.
+            </p>
+            <p class="text-indent">
+              Ultimately, the DMZ as a physical boundary and the Internet as a digital boundary share an underlying pattern: on one hand, they offer safety or convenience; on the other, they obscure a subtle infiltration of power. Just as the Korean government and media promote the DMZ as a “pure, untouched ecosystem,” big tech corporations market their platforms as open, participatory spaces. Yet the more concealed a domain is, the more deftly power weaves its influence (Foucault, 1979). The process by which governments and big tech firms craft specific narratives that citizens or users then “voluntarily” embrace aligns with Michel Foucault’s concept of “governmentality.” In much the same way the DMZ never fully escaped the debris of war or its surveillance apparatus, our supposedly boundless Internet similarly harvests consumer data as a vast resource for control.
+            </p>
+            <p class="text-indent">
+              It is this notion of “boundaries” that anchors my investigation. Though the boundary between North and South and the boundary of Internet privacy appear to be two distinct realms, both harbor a certain ambiguity that simultaneously evoke both stability and unease. As a Korean, raised amid the tension of a national divide, and as a modern Internet user who confronts the precariousness of digital privacy each day, I want to explore these two settings in tandem. The foggy edges of these boundaries may threaten or unsettle us, yet they also open up the possibility of transformation. However, the moment we romanticize these boundaries as “pristine nature” or a “free network,” the underlying power and our shared responsibility become ever more difficult to perceive. Hence, this paper illuminates the unsettling and dual nature of boundaries, revealing the hidden workings of power behind them, while pondering how we might reconceptualize and rebuild such boundaries for ourselves.
+            </p>
+            <p class="text-indent">
+              This thesis is divided into 4 chapters.
+              <a href="#chapter"><b>Chapter 1</b></a> examines how the DMZ came to be recognized as both a zone of peace and a zone of war, and sheds light on the ecological system of the DMZ, where elements of "violence" - such as land mines, invasive species, and herbicides - have co-evolved with the local flora and fauna.
+              <a href="#chapter2"><b>Chapter 2</b></a> focuses on the concept of the 'digital DMZ' and shows how the physical borders - not only Korean border but also international borders - have transformed into digital borders.
+              <a href="#chapter3"><b>Chapter 3</b></a> examines the early days of the Internet and the evolving discourse of data on the Internet in an era of hyper-connectivity. It explores how the original vision of the Internet - as an open and decentralized space - contrasts with today's networked reality, where artificial intelligence and big data can fuel a form of "data colonialism" that turns the Internet into a revealing mechanism of surveillance and control.
+              <a href="#chapter4"><b>Chapter 4</b></a> argues that the Internet is becoming another digital form of the DMZ in the Foucauldian concept of governmentality, which guides how people think and act, and closes with thoughts on the alternatives we might pursue.
+            </p>
+          </div>
+          <!-- 사이드 노트 (오른쪽) -->
+          <aside class="sidenote">
+            <figure>
+              <img src="media/Orangecable1.JPG" alt="A close-up of a pair of sticks" />
+            </figure>
+            <figure>
+              <img src="media/Cable1.JPG" alt="A close-up of a pair of sticks" />
+            </figure>
+            <p class="figcaption">
+              <b><sup >Fig.1</sup><i>A close-up of a pair of sticks (AI-generated content may be incorrect)</i></b>
+            </p>
+            <p class="figcaption">
+              <b><sup>Fig.2</sup><i>A syringe with a blue handle (AI-generated content may be incorrect)</i></b>
+            </p>
+            <p class="figcaption">
+              <sup>1</sup> In the Netherlands, the cable strands growing on the streets are a by-product of households not connected to the internet. (Interviews with KPN and Ziggo)
+            </p>
+            <p class="figcaption">
+              <sup>2</sup> Foucault’s work on disciplinary power shows how overt displays of punishment in monarchies led to revulsion and ultimately to anti-power movements; today, disciplinary power works more subtly.
+            </p>
+          </aside>
+        </div class="bottom-marker">
+      </article>
+
+      <!-- Chapter 1: (De)Militarized Zone -->
+      <article id="chapter">
+        <b class="bold"><h2 style="line-height: 1.3em;">
+         <sup>Chapter 1</sup>
+          (De)Militarized Zone
+        </h2></b>
+        <div class="Part1 content-with-sidenote">
+          <!-- 본문 내용 (왼쪽) -->
+          <div class="main-content">
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="media/chapter1/DML.gif" alt="A map of the South Korean Peninsula" />
+              </figure>
+              <figure>
+                <img src="media/chapter1/DMLsign.gif" alt="A rusty sign on a post" />
+              </figure>
+            </div>
+            <p class="figcaption">
+              <b><sup>Fig.1-2</sup></b> The Military Demarcation Line within the Korean DMZ.
+            </p>
+            <p></p>
+            <p>
+              Korean Demilitarized Zone (DMZ) is a heavily militarized strip of land running across the Korean Peninsula near the 38th parallel. It extends roughly 250 kilometers (160 miles) from east to west and spans about 4 kilometers (2.5 miles) in width, dividing the peninsula nearly in half. The DMZ was established on July 27, 1953, through the Korean Armistice Agreement following three years of Korean war(1950-1953) between Soviet-backed North Korea and U.S.-backed South Korea. This agreement is an armistice rather than a formal end to the war; therefore, in practical terms, the conflict has not ended, and both parties remain in an ongoing state of hostility. As a result, large numbers of troops remain stationed along both sides of the Military Demarcation Line (MDL), each side vigilantly guarding against potential aggression even after 71 years (National Archives, n.d.). Owing to the severity of the conflict and the precarious nature of the ceasefire, the MDL marks the position of the front line when the agreement was signed, making it one of the most contested sites during the Korean War. Considering such intense history of the region, it remains heavily fortified and largely off-limits to civilians even decades later. Apart from military outposts on both sides, only the Joint Security Area (JSA) and two authorized villages—Daeseong-dong, “Freedom Village” in South Korea and Kijong-dong, “Peace Village” in North Korea—are allowed within the DMZ (Indiana University Newsroom, 2015). Consequently, this buffer zone has remained largely inaccessible to the public for the past seven decades, reinforcing its mysterious aura.
+            </p>
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="Media/chapter1/DMZlandscape.gif" alt="DMZ" />
+              </figure>
+            </div>
+            <p>
+              Yet, in stark contrast to its heavily militarized atmosphere, the DMZ’s natural environment has flourished due to limited development and minimal human disturbance. The region functions as a transitional zone for flora from colder northern climates and those from warmer southern ecosystems. Indeed, the DMZ occupies only 1.5% of the Korean Peninsula’s total area, yet is home to 6,168 species of flora and fauna—including over 100 globally endangered species (National Instutitue of Ecology, 1974-2018). Among the 267 critically endangered species designated by South Korea’s Ministry of Environment, 102 have been confirmed in the DMZ, representing nearly 40% of the total. Seung-ho Lee, president of the DMZ Forum, refers to the region as an “accidental paradise,” marveling at how nature has reclaimed and regenerated the area over the last six decades (CNN, 2019). Such ecological recovery is even more striking when considering that, half a century ago, wartime devastation left many mountains bare, prompting children to depict hills in red rather than green. Today, global environmental organizations praise South Korea’s rapid reforestation efforts<a href="#fn13">(Choi, 2022)<sup><b>I</b></sup></a>.
+            </p>
+            <p>
+              Over time, the DMZ has been recognized domestically and internationally for its ecological and cultural value and has been portrayed as a symbol of peace. This recognition spurred biological field research and generated numerous forms of tourism and promotional products. For instance, the South Korean government developed the DMZ “Peace Trail,” comprising eleven themed walking routes that highlight the region’s natural resources Fig4. Moreover, water resources flowing from North Korea’s Hantan River through the DMZ to South Korea’s Han River are bottled and sold as pure, pristine drinking water <sup>Fig5.</sup>
+            </p>
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="Media/chapter1/DMZweb.jpg" alt="DMZ promotion website" />
+              </figure>
+              <figure>
+                <img src="Media/chapter1/Landpainting.jpg" alt="Korean landscape painting" />
+              </figure>
+            </div>
+            <p>
+              Park Jong-taek, Director of the Tourism Policy Bureau at the Ministry of Culture, Sports and Tourism, stated, “We expect that the opening of this themed route will stimulate security tourism in the DMZ border regions, leading to the recovery of local economies that have been depressed by population decline and development restrictions.” Although it is clear that this project was initiated as part of local economic development efforts, these economic considerations are omitted from the photograph. Instead, the soft and warm sunlight illuminates nature, emphasizing the serene and sacred atmosphere of paradise.
+            </p>
+            <p>
+              Despite this image of the DMZ as an emblem of peace and untouched nature, several factors complicate the narrative. Chief among them is the lingering presence of landmines. According to one account, in 1974, landmines were dropped by helicopter and scattered across various locations—an enduring threat that deters both wildlife and researchers (Park, 2022). These conditions constrain ecological surveys, which have remained fragmented and incomplete due to the political and military tensions that limit joint research between North and South Korea. Although both government agencies and global environmental organizations believe that understanding this “accidental restoration” could offer valuable insights for damaged ecosystems worldwide, real progress in studying the DMZ’s biodiversity has been sporadic. In South Korea, piecemeal surveys began along the Civilian Control Line in the mid-1980s, and full-scale ecological studies of the DMZ’s interior did not commence until after 2008 (Park, 2022). Consequently, reliable scientific data about the region’s ecosystems remain limited.
+            </p>
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="Media/chapter1/DMZpromotion.gif" alt="DMZ promotion website" />
+              </figure>
+              <figure>
+                <img src="Media/chapter1/DMZflyers.gif" alt="Korean landscape painting" />
+              </figure>
+            </div>
+            <p>
+              Meanwhile, the DMZ’s commercial and promotional portrayals continue to emphasize peace and purity, often overlooking the realities of landmines, fragmented research, and unshared water-quality data between North and South. The water sold as pure and clean, for example, is not monitored jointly by both countries, leaving the possibility of unknown pollutants migrating downstream unacknowledged (DMZ TV, 2022). These discrepancies illustrate how the DMZ has been packaged as a place of peace and natural glory, even though its scientific and ecological truths have yet to be fully ascertained. In the end, while the DMZ’s resilient ecosystems testify to nature’s capacity for regeneration, they are also layered with unresolved military tensions and remnants of war. Examining specific species—such as endangered Asiatic black bears 반달가슴곰, plants growing in soil affected by defoliants, the oriental white stork 저어새, and invasive flora like Ambrosia trifida단풍잎돼지풀—will reveal an even more complex ecological patchwork (Choi, 2022).
+          </p>
+            </div>
+
+          <!-- 사이드 노트 (오른쪽) -->
+          <aside class="sidenote">
+            <figure>
+              <img src="media/chapter1/the38th.png" alt="The 38th Parallel" />
+            </figure>
+            <p class="figcaption">
+              <b><sup>3</sup><i>The 38th Parallel</i></b><br />
+              After World War II (1945), Korea was liberated from Japanese rule, but it was divided along the 38th parallel as part of a temporary arrangement between the United States (south) and the Soviet Union (north). This division eventually led to the Korean War, when North Korea invaded South Korea in an attempt to unify the peninsula under communist rule. Although the war ended in an armistice (not a peace treaty), the border remains roughly at the same location today, near the Korean Demilitarized Zone (DMZ).
+            </p>
+            <figure>
+              <img src="media/chapter1/대성동기정동.jpeg" alt="The 38th Parallel" />
+            </figure>
+            <p class="figcaption">
+              <b><sup>4</sup><i>The only two villiages</i></b><br />
+              Kijeong-dong and Daeseong-dong were designated as the only civilian residential areas within DMZ to assert that the armed silence of the DMZ is not a symbol of abandonment but a measure maintained until the reunification of Korea. Situated around 800 meters apart, the villages are separated by the Imjin River. Consequently, the Imjin River once had served as a conduit for connection, has become a rigid boundary enforcing perpetual separation. The evolving relationship between these villages, serves as a poignant reflection of the broader realities of national division.
+            </p>
+            <figure>
+              <img src="media/chapter1/Militarypost.gif" alt="The 38th Parallel" />
+            </figure>
+            <p class="figcaption">
+              <b><sup>Fig3.</sup><i>the Militarized Zone</i></b><br />
+              Under international law, a demilitarized zone is defined as “a designated area in which a state is obliged not to station military personnel or maintain military facilities.” Although it was established as a buffer zone to prevent the recurrence of war, North and South Korea continue to watch each other intently from this narrow strip of land, with tensions never fully eased. As a result, no one can cross the DMZ—it is not so much a demilitarized zone as it is a forbidden land into which no one may enter.
+            </p>
+            <figure>
+              <img src="media/chapter1/DMZbook.jpg" alt="DMZ Book" />
+            </figure>
+            <p class="figcaption">
+              <b><sup>Fig4.</sup><i>Book Cover, Walking the DMZ Peace Road</i></b><br />
+              The cover of the book Walking the DMZ Peace Road, which documents the DMZ as its members of the DMZ Ecotourism Association traverse each course of the walking trail they developed, refers to the DMZ in a particular way intended to recast it as a space of peace and coexistence. The caption at the bottom of the cover contains expressions such as “an ecological paradise where all plants and animals are happiest because human footsteps have not touched it” and “a place where, even 70 years later, the tragedy of fratricidal conflict remains, allowing the value of peace to be felt.” Yet, how can a place untouched by human feet be a minefield, how can one feel peace amid an ongoing tragedy, and how can flora and fauna truly be at their happiest?
+            </p>
+            <p class="figcaption">
+              <b><sup>Fig5.</sup><i>Ahn Gyeon’s Mongyudo-won-do (1447)</i></b><br />
+              Ahn Gyeon’s Mongyudo-won-do represents the “ideal world (paradise)” as depicted in Korean painting. The delicate and majestic landscapes—featuring mist-enshrouded rivers and valleys along with scenes of peach tree groves—combine to create a mysterious and tranquil ambiance. The composition, divided into left, center, and right sections, rhythmically arranges mountains, water, and mist, further enhancing its dreamlike quality. This approach is similarly applied to the DMZ Peace Road, where the richness of nature and the beautiful glow of the setting sun imbue the viewer with a sense of “complete peace.” By using the motif of a dream to portray an ideal realm that transcends time and space, Mongyudo-won-do clearly indicates that its subject lies on the boundary between reality and unreality. In contrast, the Peace Road, through its depiction of the existing natural environment, reveals a romantic perspective on the DMZ.
+            </p>
+          </aside>
+        </div>
+
+      <!-- part1 sidenote finish -->
+<!-- 1-1 -->
+<div class="Part2 content-with-sidenote">
+  <div class="main-content">
+  <b class="bold"><h3>The Hidden Boundary</h3></b>
+  <div class="media_chapter1 main_media ">
+  <figure>
+    <img src="media/Chapter1/explosion2.gif" alt="explosion of trap">
+    <img src="media/Chapter1/explosion2.gif" alt="explosion of trap">
+    <img src="media/Chapter1/explosion3.gif" alt="explosion of trap">
+  </figure>
+  </div>
+  <p class="text-disc"><sup><b>8</b></sup> In October 2015, in the Demilitarized Zone (DMZ) near Paju in Gyeonggi Province, a "wooden-box mine" planted by North Korea with lethal intent exploded, seriously injuring two South Korean soldiers (Seoul Newspaper, 2015) </p>
+<p>Based on the military demarcation line in the DMZ area, 1.27 million landmines are estimated to be buried in the south and 800,000 landmines in the north, and it is evaluated as the world's best in terms of burial density (Lee, 2018) . Most of the DMZ mine areas in the south are unidentified mine areas without information related to burial. The Ministry of National Defense predicts that it will take 489 years to remove all mines in the DMZ with our current military technology, the process of identification and removal presenting a challenge the DMZ became a massive fear of the unpredictability of not knowing where landmines are buried (Lee, 2018) . The physical border of landmines is the most authoritative mechanism that marks the DMZ ecosystem as a danger. Landmines, along with organic and invertebrates, are ecological elements that make up the soil of the DMZ. The violence buried in the soil does not spare the species living in the DMZ. Modern DMZ biological species have settled down through the process of adaptation to violence that keeps the DMZ a threat (KBS, 2013) . Soldiers who worked in the DMZ say that most wild animals pass through the minefield safely because they identify landmines through their sense of smell and have their passage network(The JoongAng, 2019) . In other words, they are beings designed by violence (Song, 2022).</p>
+</div>
+<aside class="sidenote">
+<figure>
+<img src="media/Chapter1/insurred1.gif" alt="Injurred wild pig">
+</figure>
+<figure>
+<img src="media/Chapter1/insurred2.gif" alt="injured owl">
+</figure>
+<p>
+  <b><sup>Fig 9-10</sup></b> Wild animals injured by landmines are sometimes observed in the DMZ. The biological environment of the DMZ has settled down, adapting to violence. Although not directly observed, it is reported that medium-to-large mammals such as water deer, roe deer, and wild boar suffer injuries from landmines. (KBS Documentary, 2013)  
+</p>
+</aside>
+</div>
+
+        <div class="Part3 content-with-sidenote">
+          <div class="main-content">
+            <p style="text-indent: 0%;"><b class="bold"><h3>The Orange Green</h3></b></p>
+            <div class="media_chapter1 main_media">
+              <figure>
+                <img src="media/chapter1/DMZ_incident_tree.jpg" alt="DMZ Tree">
+              </figure>
+            </div>
+            <p class="text-disc">
+              <sup><b>Fig 11</b></sup> The mulberry tree in the DMZ, once cut down for
+              surveillance purposes, has never regrown since being exposed to Agent Orange.
+            </p>
+            <p>
+              After the Korean War, the DMZ became a barren ridge covered in the charred
+              remains of red blood and blackened ash (Choi, 2022). This was because most of
+              the ground fighting during the war took place in this area. From 1962 to 1970,
+              the US military also sprayed Agent Orange across the DMZ three to four times a
+              month (Tak, 2021). In areas where it was used, vegetation struggled to grow,
+              making it easier to monitor enemy movements. An example of Agent Orange use is
+              the "Mulberry Murder Incident" at the Joint Security Area after the armistice
+              (DMZ, 1997). In 1976, the U.S. military monitored Outpost 3 and the DMZ from
+              Observation Post 5, but dense mulberry branches obstructed their view. While
+              Captain Bonifas, Lt. Barrett, and their team trimmed the trees, North Korean
+              soldiers ambushed them with axes and clubs, killing both officers and injuring
+              others. In response, the U.S. deployed a carrier near North Korea as a show of
+              force (German Democratic Republic Embassy in North Korea, 1976). They also cut
+              down the mulberry trees and sprayed them with Agent Orange. This ensured that
+              the trees would never grow back. Although an invisible border now divides the
+              two sides, soldiers from both North and South continue to monitor each other
+              in plain view, making the DMZ effectively a fully armed zone.
+            </p>
+            <p>
+              Nature as a paradisiacal ideal - the distinction between nature and civilization
+              which implies the preconception that peaceful nature disengages from any human
+              intervention - is a recurrent idea in the binary frameworks of human history.
+              Again, the long-standing portrayal of the DMZ as a sanctuary free from human
+              intervention - a symbol of untainted peace and liberation - has shaped public
+              perception and remains how society imagines the DMZ. In the following chapters,
+              I will allegorically manifest the parallels between the concept of Internet
+              structure and nature from the ground to the mantle of both. By dismantling the
+              popular preconception, I argue that the Internet has become another DMZ in the
+              digital world.
+            </p>
+          </div>
+          <aside class="sidenote">
+            <figure>
+              <img src="media/chapter1/MurderatDMZ.jpg" alt="DMZ Incident">
+            </figure>
+            <p>
+              <b><sup>Fig.12</sup></b> North Korean soldiers attack United Nations Command
+              personnel with axes on Aug. 18, 1976, near checkpoint No.3 in the Joint
+              Security Area of the demilitarized zone. (Bride Lane Library/Popperforto/Getty
+              Image)
+            </p>
+            <figure>
+              <img src="media/chapter1/베트남제초제시위행진.webp" alt="Vietnam Defoliant Protest March">
+            </figure>
+            <p>
+              <b><sup>Fig.13</sup><i> Invisible Border</i></b> The Military Demarcation Line
+              is a conceptual boundary on maps, not a physical barrier like fences. Instead,
+              1,292 markers including the mulberry tree, placed 300–500m apart, indicate the
+              MDL, maintained by the UN, North Korean military, and Chinese forces. These
+              markers display Korean and English on the south side and Korean and Chinese on
+              the north. Until the 1970s, troops periodically adjusted marker positions to
+              expand territory, leading to fatal clashes. Over time, dense vegetation has
+              obscured most markers, leaving only a few visible to soldiers within the DMZ
+              today (Man, 2009).
+            </p>
+          </aside>
+        </div class="bottom-marker">
+
+</article>
+        <!-- Chapter 2: From War to the DMZ, from the DMZ to Cyber War -->
+      <article id="chapter2">
+        <b class="bold"><h2 style="line-height: 1.0em;">
+          <sup>Chapter 2</sup><br />
+          From War to the DMZ, from the DMZ to Cyber War
+        </h2></b>
+        <div class="Part2 content-with-sidenote">
+          <!-- 본문 내용 (왼쪽) -->
+          <div class="main-content">
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="media/chapter2/DMZ it.jpg" alt="IT DMZ" />
+              </figure>
+              <p class="text-disc">
+                <b><sup>Fig. 11</sup></b> The IT DMZ architecture design after the DMZ of Korea.
+              </p>
+            </div>
+            <p>
+              An American computer expert, inspired by the Demilitarized Zone of Korea, designed a network system called 'DMZ'. In this system, the internal network (intranet) is completely isolated from the external network (Internet) except for one connection segment. Through this single link, services such as shopping, securities, financial transactions, and reservations are provided to users. In cyberspace, the DMZ is a hub of extensive communication and exchange; however, once breached, internal servers and PCs are immediately compromised. With no warning or alarm, this risk can suddenly materialize. (Wikipedia, n.d.)
+            </p>
+            <p>
+              However, the latent dangers associated with perimeters are no longer limited to just a few of the enterprise services that use the DMZ network system. Today's DMZ is expanding beyond its original boundaries, transcending the network system and reaching into the transnational Internet, due to the constant mediation and universality of the Internet—a space unbound by time or place. In the novel DMZ (Kim, 1997), which captures the infinite expansion of boundaries from the offline to the online world, the residents of Daeseong-dong in South Korea and Gijeong-dong in North Korea are connected by the Internet and eventually meet again in the DMZ more than 60 years later. In this narrative, the Internet functions not as a medium for free communication driven by shared national sentiment, but as a battleground for attacking and defending. Cyber-hacking in the virtual realm thus becomes a means to enable bombing terrorism in the physical DMZ, further exacerbating the inter-Korean conflict fig13. Though they meet half a century after the separation, mistrust and persecution cloud their path to reconciliation. I believe that this novel is not merely fictional. Rather, it uses literary techniques to reveal little-known truths about how borders operate today, shifting between online and offline.
+            </p>
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="media/Chapter2/springinthegap.jpeg" alt="spring" />
+              </figure>
+              <figure>
+                <img src="media/Chapter2/Cable1.JPG" alt="cable" />
+              </figure>
+            </div>
+            <p class="text-disc">
+              <sup><b>Fig.14 (Left) </b></sup>A plant grow in the gap of old military helmet in DMZ Southen area. <br />
+              <sup><b>Fig.15 (Right) </b></sup>Internet cables root from underground and stand alone.
+            </p>
+            <p>
+              In 2023, more than 1.62 million hacking attempts against Korean companies and public institutions were traced back to North Korea in more than 80% of cases, according to the Korean National Intelligence Service (SBS, 2022). However, North Korea's cyber-attacks and terrorism are not confined to South Korea; its targeting of cryptocurrencies and financial exchanges is causing problems on a global scale (DailyNK, 2021). According to Svitlana Natviyenko, cyber war - which includes various incidents, tensions and conflicts arising from the development of the Internet infrastructure (often referred to as "information war" or "netwar") - is essentially a struggle for hegemony between state actors, non-state actors, companies and ad hoc groups. This war is being waged in a completely opaque manner, intertwined with massive digital mobilisations, and at the same time is emerging as a war of unprecedented ahumanity, run by the malware implantation, botnets and chatbots (Svitlana Natviyenko, 2021). The legacy of the Cold War is evident not only in the firearms carried by soldiers on the DMZ, but also in the silent codified gunfire of cyber warfare. Although armed clashes at the DMZ were frequent until the 1980s, superficial conflicts have subsided since the 1990s(*ChatGPT answered), and with them the sense of border vigilance and division in Korean society. North Korea’s attacks have extended beyond its physical borders, infiltrating the digital realm. As territorial boundaries blur and once-visible signs of conflict fade, armistice has come to be seen as the end of war, and silence as synonymous with peace. Nature, often framed as a symbol of peace, instead serves as a facade for control in a world that has grown blind to the violence embedded in borders.
+            </p>
+          </div>
+          <!-- 사이드 노트 (오른쪽) -->
+          <aside class="sidenote">
+            <figure>
+              <img src="media/Chapter2/china-firewall-internet.webp" alt="China fire wall" />
+            </figure>
+            <p>
+              <b><sup>4</sup><i>The Great Fire Wall of China</i></b>
+              Firewalla are fundamentally designed to inspect and control network traffic according to defined rules, which is a core aspect of network security. This same functionality—filtering and controlling data—can also be harnessed for censorship or content control. For example, state-level systems like the Great Firewall of China use advanced filtering techniques (including deep packet inspection, DNS blocking, etc.) to restrict access to certain foreign websites and services. In essence, while the primary goal of a firewall in many settings is to protect against malicious traffic and unauthorized access, its capabilities can also be directed towards controlling and censoring information flow.
+            </p>
+            <figure>
+              <img src="media/Chapter2/NKcyber.jpg" alt="NorthKorean students studying Hacking" />
+            </figure>
+            <p>
+              <b><sup>Fig.13</sup><i>North Korean students practicing computer skills at Mangyongdae Revolutionary School. (Korean Central News Agency)</i></b>
+              North Korean students practicing computer skills at Mangyongdae Revolutionary School. (Korean Central News Agency) North Korea has internet access only in Pyongyang, while the rest of the country operates on a closed intranet, making it disconnected from the global online network. As a result, cyberattacks targeting North Korea are largely ineffective, whereas North Korea's cyberattacks on the world are not. According to Kim Kuk-sung, a former high-ranking North Korean official (Unanswered Questions, 2022), becoming a member of the Cyber Reconnaissance General Bureau and gaining unrestricted internet access abroad serves as a major motivation for many young North Koreans to study hacking. Perhaps due to this, the Harvard Kennedy School’s Belfer Center, in its "National Cyber Power Index 2022," ranked North Korea first in the world for offensive cyber capabilities in the financial sector. (*)the increase f NK attack on Korea digital attact (chat GPt)
+            </p>
+          </aside>
+        </div class="bottom-marker">
+</article>
+      <!-- Chapter 3: The Shining and Blinding Neon Green Internet -->
+      <article id="chapter3">
+        <h2>
+         <b class="bold"><sup>Chapter 3</sup><br />
+         The Shining and Blinding Neon Green Internet</b>
+        </h2>
+        <div class="content-with-sidenote">
+          <!-- 본문 내용 (왼쪽) -->
+          <div class="main-content">
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="media/chapter3/Osmose1.png" alt="Osmose" />
+              </figure>
+              <figure>
+                <img src="media/chapter3/Osmose2.png" alt="Osmose" />
+              </figure>
+              <figure>
+                <img src="media/chapter3/Osmose3.png" alt="Osmose" />
+              </figure>
+              <p class="text-disc">
+                <sup><b>Fig. 15</b></sup>Char Davies’ Osmose is a VR installation artwork (1991)
+              </p>
+            </div>
+            <p>
+              Since its commercialization in the 1990s, the Internet has been conceptualized as a symbol of freedom and resistance against oppressive state power (Smith, 2001). The Free Software and Open-Source Movements were visually embodied in the Linux operating system (1991), while the Declaration of the Independence of Cyberspace (1996) proclaimed a vision of liberation (Jones, 2013). Even before these milestones, the countercultural ideals of the hippie movement—advocating a return to nature—merged with the technological possibilities of the Internet, shaping what some consider the freest space in history (Torvalds et al., 2001/2002).
+            </p>
+            <p>
+              Nature and the Internet share a fundamental trait: both are "green spaces" that emerged in the postwar period as alternatives born from skepticism and rebellion against centralized power. As Char Davies’ comparison of cyberspace to nature illustrates, some sought refuge in nature, while others envisioned liberation in the open, decentralized space of the Internet (Rheingold, 1993).
+            </p>
+            <p>
+              The color green , derived from the Old English grene, connects both realms, symbolizing vitality, renewal, and security while evoking feelings of peace and calm (Gage, 1993). In cyberspace, however, green has taken on a distinct aesthetic, heavily influenced by science fiction—most notably in The Matrix (1999), where cascading neon green code against a black backdrop became an iconic visual.
+            </p>
+            <p>
+              Yet, green's symbolism extends beyond peace and harmony. As Gage (1993) points out, it is also associated with greed, representing the insatiable pursuit of wealth. The Internet, once envisioned as a utopian green space, has darkened over time, revealing a deeper shade of green beneath its shimmering neon surface—exposing the hidden greed embedded within digital spaces (Bogna, 2023). Green can no longer be assumed to represent tranquility.
+            </p>
+            <p>
+              Thirty years after Char Davies introduced the idea of cyberspace as a green forest, it is essential to revisit this vision and explore where nature and cyberspace truly converge (Jones, 2014). In The Black Forest of the Internet, Bogna captures how the once-soothing green Internet forest has transformed into a shadowed realm, where conspiracy and surveillance cast an unblinking gaze.
+            </p>
+          </div>
+          <!-- 사이드 노트 (오른쪽) -->
+          <aside class="sidenote">
+            <p>
+              <sup>Fig.16</sup> <b><i>Char Davies’ Osmose</i></b> is a VR installation artwork that reflects the cyber-utopian sentiment of the 1990s. It explores the fusion of reality and virtuality by blurring the boundaries between cyberspace and nature evoking the process of nature’s freedom. The use of somewhat hazy visuals and muted colors were to evoke a dreamlike, meditative atmosphere. However, I feels it eerie and unsettling, making it difficult to experience the intended meditation on freedom; instead, it appears to reflect the camouflaged peace and freedom of a politicized internet.
+            </p>
+            <figure>
+              <img src="media/Chapter3/greenmonitor.png" alt="old monitor's green" />
+            </figure>
+            <p>
+              <b><sup>7</sup><i>early monochrome computer monitors that displayed green text on dark screens</i></b>
+            </p>
+            <figure>
+              <img src="media/Chapter3/greenmoney.png" alt="Green money" />
+            </figure>
+            <p>
+              <b><sup>7</sup><i>The reverse side of a U.S. one-dollar bill, printed in rich green ink</i></b>
+            </p>
+          </aside>
+        </div>
+        <!-- chapter3 - 1 -->
+        <div class="Part3 content-with-sidenote">
+          <div class="main-content">
+            <h3><b class="bold">The Internet as a dark forest</b></h3>
+            <div class="media_chapter main_media">
+              <figure>
+                <img src="Media/Chapter3/Treecable.jpg" alt="cable entangled with root" />
+              </figure>
+            </div>
+            <p class="text-disc">
+              <sup><b>Fig.16</b></sup>The cable lines entangled with the roots of trees (getty image)
+            </p>
+            <p class="therootsgrow">
+              “The roots grow upwards, and the crown reaches downwards: wrapped around the planet, the internet circulates between satellites and underwater cables. The internet is a tangible space, yes, but also a mental expanse—made for sleepwalking, for a mundane delirium. For sacrificial rituals, people get lost in it by shining light in all the wrong places, exposing too much about themselves, and communicating impulsively, recklessly. We can enter through an interface, but also through our pocket. We can enter through a screen, but we must screen something of ourselves in return. A traveler who enters the forest is never alone, with eyes wrapped around them like insulation tape (Bogna, 2020).”
+            </p>
+            <p>
+              In the blind forest, digitalization creeps under the skin. Can privacy exists in this forest? – In other words, Is the boundary of privacy feels under the skin as well as digitalization? As virtual reality often means cyberspace, it is virtual that almost every single action and information we transmit as data is recorded. However, what kind of data is collected and recorded, and how the collected data is analysed, is known only to a few other large organisations, not to the individuals concerned as much. Hardware such as submarine cables, satellites and data centers, which form the key infrastructure that connects intercontinental internet traffic, are owned and operated by specific companies and governments. Because of their market power and influence over technical standards, Big Tech companies have inherent political and economic interests in the design and standardization of software and protocols such as TCP/IP, DNS and HTML. Furthermore, the influence of Big Tech's phantomization is also manifested in institutional arrangements and practices (Article 19, Knodel and Uhlig, 2020). The privatized components and mechanisms of the internet are touted as convenient, and their flaws are obscured by dark patterns (Dickinson, 2023). In the age of hyper-connectivity, where social activities, work, commerce and government have moved from offline to online, access to services has become inevitable, but users are excluded if they do not consent in the moment of doubt (Park, 2021). Subscription has become a survival strategy, not a choice. Every computer operating system or smartphone application comes with a jargon-laden set of terms and conditions that are difficult for non-specialists to understand. When it comes to our digital presence, we don't compromise. We click the accept button to use the service, but we have no idea what the consequences of our actions will be. Take it to further extreme, while the upward mobile web of the Internet is dependent on the deeply rooted crown below, the eradication of the data roots is the eradication of the one’s existence on world.
+            </p>
+          </div>
+          <aside class="sidenote">
+            <figure>
+              <img src="Media/Chapter3/Internettravels acrossaceans.png" alt="" />
+            </figure>
+            <p>
+              <b><sup>7</sup><i>Submarine Cable Taps</i></b>
+              Almost all intercontinental internet traffic takes place underwater. A gigantic web of submarine cables facilitates our global communication. But what happens to the data that flows from continent to continent through these underwater arteries? Some of these cables are tapped by the British Government Communications Headquarters (GCHQ) through systems developed in collaboration with companies including Vodafone and BT Cable. But on what scale is this happening? The interactive website Submarine Cable Taps is an attempt to map the extent of this surveillance network.
+            </p>
+            <figure>
+              <img src="Media/Chapter3/termsandconditions.png" alt="Terms and condition" />
+            </figure>
+            <p>
+              <b><sup>8</sup><i>Screenshot of ToS;DR showing summary ratings for Facebook, Amazon, Reddit (all Grade E: very problematic terms) and Wikipedia (Grade B: more balanced terms). Terms of Service;</i></b> Didn’t Read (ToS;DR) is a community-driven project founded in 2012 to address the lack of transparency in online terms of service agreements. Its tagline captures the problem: “I have read and agree to the Terms” is the biggest lie on the web, since virtually no one actually reads these lengthy legal policies. ToS;DR tackles this by analyzing and grading the terms and privacy policies of major websites, distilling them into concise, accessible summaries for user. Volunteer contributors review each service’s terms, highlight key points (labeling them as “good,” “neutral,” “bad,” or “blocker” for very serious issues), and assign an overall grade from A (best) to E (worst) reflecting how fairly the service respects user rights.
+            </p>
+          </aside>
+        </div>
+        <!-- chapter3 - 2 -->
+        <div class="Part3 content-with-sidenote">
+        <div class="main-content">
+          <h3><b class="bold">Green energy extraction</b></h3>
+          <div class="media_chapter main_media">
+            <figure>
+              <img src="Media/Chapter3/CCTVdetection.jpg" alt="CCTV" />
+            </figure>
+            <figure>
+              <img src="Media/Chapter3/Reticle.webp" alt="Shooting in DMZ" />
+            </figure>
+          </div>
+          <p class="text-disc">
+            <sup><b>Fig.17 (Left)</b></sup>
+            The cable lines entangled with the roots of trees (getty image)
+            <br />
+            <sup><b>Fig.18 (Right)</b></sup>
+            the reticle focused on the target in DMZ from the view of a sniper.
+          </p>
+          <p>
+            Since 2016, the value of data has surpassed that of oil. The world's most valuable companies, as determined by market capitalisation, are Google, Meta, Amazon, and Tesla. The primary reason for these companies' success is their exploitation of a highly valuable commodity: the data of individuals (The great hack, 2019). The practice of extracting data from individuals in exchange for services is indicative of the current status of information giants such as Google, where the liberating, positive, and productive forms of power are emerging as the new hegemony, replacing the old power of surveillance and oppression.
+          </p>
+          <div class="media_chapter main_media">
+            <figure>
+              <img src="Media/Chapter3/Google-evil.jpg" alt="Google motto" />
+            </figure>
+          </div>
+          <p class="text-disc">
+            <sup><b>Fig. 19</b></sup>
+            <br />
+          </p>
+          <p>
+            Google's original motto, 'Don't be evil', was a self-reflexive declaration that warned against the dangers of massive power in the process of accessing, collecting, and analyzing all the world's information. Google recognizes that knowledge and power are intertwined, and states on its website that its goal is to 'organize the world's information and make it accessible to everyone' (How Google Search Works, n.d.). However, the process by which Google collects and indexes information, tailoring it to individual users, is a sophisticated mechanism of power. For example, corporate-driven search engines such as Google and its mapping system are designed to meet the needs of global and local markets, reproducing a singular and implicitly normalized perspective derived from colonialist projects (Vertical Atlas, 2022). However, these processes of categorization and mapping do not fully capture lived reality and often conflict with structures that impose universal standards. The inherent complexity of unstructured data poses significant challenges in terms of comprehension and quantification. Google's approach to categorizing and quantifying this data employs a set of rules, thereby reinforcing the arbitrariness of its algorithms. This act of power effectively marginalizes intuition and experience, relegating them to a secondary or erroneous status. This phenomenon serves to limit our perception, blinding us to alternative forms of power that might exist beyond the scope of Google's concerns (Park, 2019).
+          </p>
+        </div>
+        </div>
+      
+
+
+              <!-- part1 sidenote finish -->
+<!-- 1-1 -->
+
+
+        <!-- chapter3 - 3 -->
+        <div class="Part3 content-with-sidenote">
+        <div class="main-content">
+          <h3><b class="bold">Militarized Pattern of Green Internet</b></h3>
+          <div class="media_chapter main_media">
+            <figure>
+              <img src="Media/Chapter3/cloudserver.jpg" alt="Cloud Internet server" />
+              <img src="Media/Chapter3/panopticon.avif" alt="Panopticon" />
+            </figure>
+          </div>
+          <p class="text-disc">
+            <sup><b>Fig.20 (Left)</b></sup>
+            The cloud Internet server consists of gigantic factories that enable exchanges and transactions worldwide
+            <br />
+            <sup><b>Fig.21 (Right)</b></sup>
+            Jeremy Bentham’s original blueprint for the Panopticon, a circular prison design proposed in the late 18th century.
+          </p>
+          <p>
+            Mega-corporations like Google transform individuals into dividuals, measuring and modulating their behavior through vast data infrastructures. In Postscript on the Societies of Control, Gilles Deleuze describes a shift from shaping individuals to administering dividuals—fragmented digital selves reduced to numeric footprints stored in data banks (Deleuze, 1992). Our online behavior is continuously captured, analyzed, and deconstructed into statistical vectors, clusters, and patterns. Every click refines an ever-evolving, multi-dimensional data portrait, not as a coherent self but as a fluid, algorithmically defined entity.
+          </p>
+          <p>
+            This data body—consisting of millions of data points across countless dimensions—is what Deleuze terms the dividual, a human subject fragmented and reducible to data representations. The Critical Art Ensemble warns that this digital self serves corporate and state surveillance, describing it as “the fascist sibling of the virtual body.” Unlike a unified identity, the dividual is not centralized but dispersed across rhizomatic networks of data brokers and constant information exchange.
+          </p>
+          <p>
+            According to Marco Deseriis, the dividual is inherently interactive, easily detached and recombined with other data fragments. Matteo Pasquinelli expands this idea, suggesting that dividuals enable collective formations, giving rise to condividuals—networked, posthuman assemblages shaped by algorithmic governance. In contrast to the individual, which asserts uniqueness, the dividual is defined by its endless fluidity, recombination, and integration into broader systems of control.
+          </p>
+        </div>
+          <aside class="sidenote">
+            <p>
+              <b><sup>Fig. 21</sup><i>The digital panopticon</i></b>
+              extends Bentham’s concept of unseen surveillance to the modern digital age. Foucault's analysis in Discipline and Punish (1975) framed the Panopticon as a metaphor for institutional control, now mirrored in internet platforms, data analytics, and pervasive monitoring. Like Bentham’s watchman, companies and governments collect data without users knowing when or how they are observed. This constant potential surveillance leads individuals to self-regulate their online behavior, much like prisoners adjusting under an unseen guard.
+            </p>
+            <figure>
+              <img src="Media/Chapter3/Onlineculturewars.jpg" alt="Terms and condition" />
+            </figure>
+            <p>
+              <b><i>Disnovation.org. Online culture Wars, a cartography of online culture wars in the form of a political compass meme. 2018-2019.</i></b>
+              The digital public sphere is a quagmire. The culture wars raging on online platforms like Facebook, Twitter, Reddit and 4chan are unstoppable. A character as Pepe the Frog, who started out as a left -wing pet frog, was rapidly appropriated as a symbol of right wing extremist thought. Who influences the dissemination and meaning of these memes? Social media are not innocent platforms for information exchange; their algorithms and bots contribute to political and phychological manipulation. Disnovation.org attempts to map how these online platforms influence political thoughts and statements by zooming in on the technological processes behind these systems.
+            </p>
+          </aside>
+      
+        </div class="bottom-marker">
+</article>
+
+      <!-- Conclusion 섹션 -->
+      <article id="conclusion">
+        <h2 class="bold">Conclusion</h2>
+        <p>
+          The analysis of both the physical DMZ and the digital DMZ of the Internet reveals a common trait: while they offer safety and convenience, they also conceal mechanisms of control and surveillance. Protective boundaries, whether geographical or digital, mask deeper power structures that regulate our behavior and perceptions. As a Korean born in a divided nation and a contemporary Internet user, I find that the quiet acceptance of these boundaries both comforts and unsettles us. When the imagery of pristine nature or a free network hides the underlying grip of power, our shared responsibility to question and redefine these spaces becomes ever more crucial.
+        </p class="bottom-marker">
+</article>
+
+      <!-- Bibliography 섹션 -->
+      <article id="bibliography">
+        <h2 class="bold">Bibliography</h2>
+        <ol>
+          <li>
+            CNN World,
+            <em>Wildlife is flourishing in these demilitarized zones</em>. 27 Nov 2019,
+            <a href="https://edition.cnn.com/2019/11/25/world/wildlife-demilitarized-zones-intl-c2e/index.html">https://edition.cnn.com/2019/11/25/world/wildlife-demilitarized-zones-intl-c2e/index.html</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Korean_Demilitarized_Zone">Wikipedia: Korean Demilitarized Zone</a>
+          </li>
+          <li>
+            (사)한국DMZ평화생명동산, et al. <em>DMZ를 보고합니다</em>. 열린책들, 30 Mar 2022.
+          </li>
+          <li>
+            “5월31일 DMZ에 새겨진 한국전쟁의 상흔.” <em>Kyunghyang Shinmun</em>, 31 May 2021,
+            <a href="https://www.khan.co.kr/article/202105310000001">https://www.khan.co.kr/article/202105310000001</a>
+          </li>
+          <li>
+            “AI Decolonial Manyfesto.” <em>manyfesto.ai</em>,
+            <a href="https://manyfesto.ai/">https://manyfesto.ai/</a>, Accessed 12 Jan. 2025.
+          </li>
+          <li>
+            Bridle, James.
+            <em>New Dark Age: Technology and the End of the Future</em>. Verso, 2018.
+          </li>
+          <li>
+            “Calculating Empires: A Genealogy of Technology and Power Since 1500.” <em>calculatingempires.net</em>,
+            <a href="http://calculatingempires.net/?pos=25266.03%2C4407.03%2C15.3789">http://calculatingempires.net/?pos=25266.03%2C4407.03%2C15.3789</a>, Accessed 12 Jan. 2025.
+          </li>
+          <li>
+            Choi, Jae-chun (최재천). <em>생태의 시대와 DMZ</em>. 열린책들, 30 Mar. 2022.
+          </li>
+          <li>
+            Metahaven. “Captives of the Cloud: Part I.” <em>e-flux Journal</em>, no. 37, Sept. 2012,
+            <a href="https://www.e-flux.com/journal/37/61228/captives-of-the-cloud-part-i/">https://www.e-flux.com/journal/37/61228/captives-of-the-cloud-part-i/</a>, Accessed 12 Jan. 2025.
+          </li>
+          <li>
+            Paul Cournet and Negar Sanaan Bensi.
+            <em>Datapolis: Exploring the Foot print of Data on Our Planet and Beyond</em>. nai010 Publishers, 2023.
+          </li>
+          <li>
+            “The Emerald: So You Want to Be a Sorcerer in the Age of Mythic Powers (The AI Episode).” <em>The Emerald</em>, n.d., from 2:40 to 6:10. Accessed 30 Jan. 2025.
+          </li>
+          <li>
+            Foucault, Michel. “Governmentality.” <em>Ideology and Consciousness</em>, no. 6, 1979, pp. 5–21.
+          </li>
+          <li>
+            Girard-Meunier, François. “Digital Metaphors Are.na Documentation.” <em>Are.na</em>,
+            <a href="https://www.are.na/francois-gm/digital-metaphors-qu-argxgxiq">https://www.are.na/francois-gm/digital-metaphors-qu-argxgxiq</a>, Accessed 22 Jan. 2025.
+          </li>
+          <li>
+            Girard-Meunier, François. “Tech Metaphor Glossary.” <em>Are.na</em>,
+            <a href="https://www.are.na/francois-gm/digital-metaphors-qu-argxgxiq">https://www.are.na/francois-gm/digital-metaphors-qu-argxgxiq</a>, Accessed 22 Jan. 2025.
+          </li>
+          <li>
+            KPN Representative. Personal interview. 21 Dec. 2024.
+          </li>
+          <li>
+            Lekkerkerk, Niekolaas Johannes, and Eva Burgering, editors. <em>Working Ecologies: Art, Science and Activism towards Climate Justice</em>. Valiz, 2024.
+          </li>
+          <li>
+            Mayor, Adrienne. <em>Gods and Robots: Myths, Machines, and Ancient Dreams of Technology</em>. Princeton UP, 2018.
+          </li>
+          <li>
+            Nissenbaum, Helen. <em>Privacy in Context: Technology, Policy, and the Integrity of Social Life</em>. Stanford University Press, 2010.
+          </li>
+          <li>
+            Park, Seung-il (박승일). <em>기계, 권력, 사회 인터넷은 어떻게 권력이 되었는가</em>. 사월의책, 25 Nov. 2021.
+          </li>
+          <li>
+            Song, SeungJoon. <em>Ecological Guide Book to Korean DMZ</em>, 2022.
+          </li>
+          <li>
+            Van den Boomen, Marianne. <em>Transcoding the Digital: How Metaphors Matter in New Media</em>. Institute of Network Cultures, 2014.
+          </li>
+          <li>
+            Ziggo Representative. Personal interview. 21 Dec. 2024.
+          </li>
+          <li>
+            Zuboff, Shoshana. <em>The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power</em>. PublicAffairs, 2019.
+          </li>
+          <li>
+            <em>The Great Hack</em>. Directed by Karim Amer and Jehane Noujaim, Netflix, 2019.
+          </li>
+          <li>
+            북한 지뢰 폭발 당시 영상
+            <a href="https://www.youtube.com/watch?v=v-H8oEZq4i4">https://www.youtube.com/watch?v=v-H8oEZq4i4</a>
+          </li>
+          <li>
+            Paul Cournet and Negar Sanaan Bensi. <em>Datapolis</em>. Nai010 Publishers, 2023.
+          </li>
+        </ol>
+      
+      
+      </article>
+      <footer>
+        <p>&copy; 2025 Yena Jang. All rights reserved.</p>
+      </footer>
+
+    </main>
+
+
+<!-- 
+    각주 영역
+    <aside id="footnotes" aria-label="Footnotes">
+      <hr />
+      <ol>
+        <li id="fn1">
+          <p>
+            United Nations Command, <em>Korean Armistice Agreement</em> (1953).
+            <a href="#fnref1">↩︎</a>
+          </p>
+        </li>
+        <li id="fn2">
+          <p>
+            San Yeon Park, 1997. <em>DMZ</em>. Seoul: Han Publishing.
+            <a href="#fnref2">↩︎</a>
+          </p>
+        </li>
+        <li id="fn3"></li>
+        <li id="fn4">
+          <p>
+            Shoshana Zuboff, 2019. <em>The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power</em>. New York: PublicAffairs.
+            <a href="#fnref4">↩︎</a>
+          </p>
+        </li>
+        <li id="fn5">
+          <p>
+            Helen Nissenbaum, 2010. <em>Privacy in Context: Technology, Policy, and the Integrity of Social Life</em>. Stanford: Stanford University Press.
+            <a href="#fnref5">↩︎</a>
+          </p>
+        </li>
+        <li id="fn6"></li>
+        <li id="fn7">
+          <p>
+            Michel Foucault, 1979. <em>Discipline and Punish: The Birth of the Prison</em>. New York: Vintage Books.
+            <a href="#fnref7">↩︎</a>
+          </p>
+        </li>
+        <li id="fn8"></li>
+        <li id="fn9">
+          <p>
+            National Archives, n.d. <em>The Korean Armistice Agreement and the DMZ</em>. Available at:
+            <a href="https://www.archives.gov/milestone-documents/armistice-agreement-restoration-south-korean-state">https://www.archives.gov/...</a>
+            [Accessed 23 February 2025].
+            <a href="#fnref9">↩︎</a>
+          </p>
+        </li>
+        <li id="fn10"></li>
+        <li id="fn11">
+          <p>
+            Korea DMZ Peace and Ecology Institute, et al., 2022. <em>Reporting on the DMZ</em>. Open Books, 30 March.
+            <a href="#fnref11">↩︎</a>
+          </p>
+        </li>
+        <li id="fn12">
+          <p>
+            <strong>CNN World, 2019.</strong> <em>Wildlife is flourishing in these demilitarized zones</em>. [online] 27 November. Available at:
+            <a href="https://edition.cnn.com/2019/11/25/world/wildlife-demilitarized-zones-intl-c2e/index.html">https://edition.cnn.com/...</a>
+            [Accessed 23 February 2025].
+            <a href="#fnref12">↩︎</a>
+          </p>
+        </li>
+        <li id="fn13">
+          <p>
+            Choi, Jae-chun, 2022. <em>The Age of Ecology and the DMZ</em>. Open Books, 30 March.
+            <a href="#fnref13">↩︎</a>
+          </p>
+        </li>
+        <li id="fn14">
+          <p>
+            DMZ TV, 2022. <em>DMZ Part 2: The Unfinished Ordeal</em>. [TV program]
+            <a href="#fnref14">↩︎</a>
+          </p>
+        </li>
+        <li id="fn15">
+          <p>Ibid. <a href="#fnref15">↩︎</a></p>
+        </li>
+        <li id="fn16">
+          <p>
+            Seoul Newspaper, 2015. Video Released of Second Explosion During North Korea's DMZ Landmine Provocation. [online] 10 August. Available at:
+            <a href="https://www.seoul.co.kr/news/newsView.php?id=20150810500412">https://www.seoul.co.kr/news/...</a>
+            [Accessed 23 February 2025].
+            <a href="#fnref16">↩︎</a>
+          </p>
+        </li>
+        <li id="fn17">
+          <p>
+            Jo-Eun, Lee. <a href="https://www.voakorea.com/a/4595253.html">https://www.voakorea.com/a/4595253.html</a>, 2 October 2018.
+            <a href="#fnref17">↩︎</a>
+          </p>
+        </li>
+        <li id="fn18">
+          <p>
+            Lee, Yong-Min, 2018. <em>Efficient Methods for Landmine Removal to Realize the DMZ Peace Zone</em>. Seoul: The Institute for Democracy.
+            <a href="#fnref18">↩︎</a>
+          </p>
+        </li>
+        <li id="fn19">
+          <p>
+            KBS, 2013. How Are Wild Boars, Raccoon Dogs, and Gorals Living in the DMZ? | DMZ: The Two Faces of the Ecosystem. [online] 4 August. Available at:
+            <a href="https://www.youtube.com/watch?v=Mlrza-biofc">https://www.youtube.com/watch?v=Mlrza-biofc</a>
+            [Accessed 23 February 2025].
+            <a href="#fnref19">↩︎</a>
+          </p>
+        </li>
+        <li id="fn20">
+          <p>
+            JoongAng Ilbo, 2019. <em>[News A/S] The Survival Mystery of DMZ Asiatic Black Bears… Do They Avoid Landmines by Smelling Them?</em> [online] 10 May. Available at:
+            <a href="https://www.joongang.co.kr/article/23464838#home">https://www.joongang.co.kr/article/23464838#home</a>
+            [Accessed 23 February 2025].
+            <a href="#fnref20">↩︎</a>
+          </p>
+        </li>
+        <li id="fn21">
+          <p>
+            Song, SeungJoon, 2022. <em>Ecological Guide Book to Korean DMZ</em>.
+            <a href="#fnref21">↩︎</a>
+          </p>
+        </li>
+        <li id="fn22">
+          <p>
+            Ji-Young, 2021. <em>The hurt of Korean war engraved in DMZ on May 31st</em> [online] 31 May. Available at:
+            <a href="https://www.khan.co.kr/national/national-general/article/202105310000001">https://www.khan.co.kr/national/national-general/article/202105310000001</a>
+            [Accessed 23 February 2025]. <em>Note: The article is in Korean; ensure accurate translation if citing specific content.</em>
+            <a href="#fnref22">↩︎</a>
+          </p>
+        </li>
+        <li id="fn23">
+          <p>
+            German Democratic Republic Embassy in North Korea, 1976. <em>Report on the ‘Axe Murder Incident’</em>. [online] Available at:
+            <a href="https://digitalarchive.wilsoncenter.org/document/report-axe-murder-incident-gdr-embassy-north-korea">https://digitalarchive.wilsoncenter.org/document/...</a>
+            [Accessed 23 February 2025].
+            <a href="#fnref23">↩︎</a>
+          </p>
+        </li>
+        <li id="fn24"></li>
+        <li id="fn25">
+          <p>
+            Manchuiheon, [blog] 21 April. Available at:
+            <a href="https://blog.naver.com/wleena/20107593012">https://blog.naver.com/wleena/20107593012</a>
+            [Accessed 23 February 2025].
+            <a href="#fnref25">↩︎</a>
+          </p>
+        </li>
+        <li id="fn26"></li>
+        <li id="fn27">
+          <p>
+            SBS, 2022. <em>Unanswered Questions Episode 1331: The Reality of North Korea’s Hacker Unit in the Dark</em>. [TV program] 2 July.
+            <a href="#fnref27">↩︎</a>
+          </p>
+        </li>
+        <li id="fn28">
+          <p>
+            Daily NK, 2021. <em>North Korea triples cyber capabilities… Continues targeting South Korea’s key industries</em>. [online] [Accessed 23 February 2025].
+            <a href="#fnref28">↩︎</a>
+          </p>
+        </li>
+        <li id="fn29">
+          <p>
+            Svitlana Natviyenko, 2021. <em>Cyberwar and the Subjects of the Topological Uncanny</em>. Veritic Atlas, Arnhem, p. 178.
+            <a href="#fnref29">↩︎</a>
+          </p>
+        </li>
+        <li id="fn30"></li>
+        <li id="fn31"></li>
+        <li id="fn32">
+          <p>
+            Bogna Konior, 2020. <em>The Dark Forest Theory of the Internet</em>. Veritic Atlas, Arnhem, p. 102.
+            <a href="#fnref32">↩︎</a>
+          </p>
+        </li>
+        <li id="fn33"></li>
+        <li id="fn34">
+          <p>
+            Article 19, Knodel, M. and Uhlig, U., 2020. <em>How the Internet Really Works: An Illustrated Guide to Protocols, Privacy, Censorship, and Governance</em>. San Francisco: No Starch Press.
+            <a href="#fnref34">↩︎</a>
+          </p>
+        </li>
+        <li id="fn35">
+          <p>
+            Dickinson, G.M., 2023. 'Privately Policing Dark Patterns', <em>Georgia Law Review</em>, 57, pp. 1633–1700.
+            <a href="#fnref35">↩︎</a>
+          </p>
+        </li>
+        <li id="fn36">
+          <p>
+            <strong>Park, Seung-il,</strong> <em>기계, 권력, 사회 인터넷은 어떻게 권력이 되었는가</em>. Saywol’sBooks, 25 Nov. 2021.
+            <a href="#fnref36">↩︎</a>
+          </p>
+        </li>
+        <li id="fn37">
+          <p>
+            The Great Hack, 2019, Netflix documentary.
+            <a href="#fnref37">↩︎</a>
+          </p>
+        </li>
+        <li id="fn38">
+          <p>Ibid. <a href="#fnref38">↩︎</a></p>
+        </li>
+        <li id="fn39">
+          <p>
+            <a href="file:///C:/Users/User/Desktop/1887_3505465-_Dark%20Patterns__%20The%20Case%20for%20Regulatory%20Pluralism%20between%20the%20European%20Union_s%20Consumer%20and%20Data%20Protection%20Regimes.pdf">
+              file:///C:/Users/User/Desktop/1887_3505465-_Dark Patterns__ The Case for Regulatory Pluralism between the European Union_s Consumer and Data Protection Regimes.pdf
+            </a>
+            <a href="#fnref39">↩︎</a>
+          </p>
+        </li>
+      </ol>
+    </aside> -->
+
+    <!-- 문서 푸터 -->
+
+
+
+
+    <div id="grid-container">
+      <!-- 왼쪽 격자 컨테이너 -->
+      <div id="grid-left" class="grid-side"></div>
+      <!-- 오른쪽 격자 컨테이너 -->
+      <div id="grid-right" class="grid-side"></div>
+
+  </body>
+</div>
+  </html>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // 수평 커서 생성
+  const customCursor = document.createElement("div");
+  customCursor.className = "custom-cursor";
+  document.body.appendChild(customCursor);
+
+  // 수직선 생성
+  const verticalLine = document.createElement("div");
+  verticalLine.className = "vertical-line";
+  document.body.appendChild(verticalLine);
+
+  // 조준 원 생성
+  const crosshair = document.createElement("div");
+  crosshair.className = "crosshair";
+  document.body.appendChild(crosshair);
+
+  let isDragging = false; // 클릭 상태 여부
+
+  // 마우스 이동 시 커서 업데이트
+  document.addEventListener("mousemove", function (e) {
+    customCursor.style.top = e.clientY + "px"; // 수평선 위치 업데이트
+
+    if (isDragging) {
+      verticalLine.style.left = e.clientX + "px"; // 수직선 X 위치 업데이트
+      crosshair.style.left = e.clientX - 40 + "px"; // 중앙 정렬 (80px / 2)
+      crosshair.style.top = e.clientY - 40 + "px";
+    }
+  });
+
+  // 마우스 클릭 시 수직선 & 조준 원 표시
+  document.addEventListener("mousedown", function (e) {
+    isDragging = true;
+    verticalLine.style.left = e.clientX + "px"; // 수직선 X 위치
+    verticalLine.style.display = "block";
+    crosshair.style.left = e.clientX - 40 + "px";
+    crosshair.style.top = e.clientY - 40 + "px";
+    crosshair.style.display = "block";
+  });
+
+  // 마우스 드래그 시 업데이트
+  document.addEventListener("mousemove", function (e) {
+    if (isDragging) {
+      verticalLine.style.left = e.clientX + "px";
+      crosshair.style.left = e.clientX - 40 + "px";
+      crosshair.style.top = e.clientY - 40 + "px";
+    }
+  });
+
+  // 마우스 버튼을 놓으면 숨김
+  document.addEventListener("mouseup", function () {
+    isDragging = false;
+    verticalLine.style.display = "none";
+    crosshair.style.display = "none";
+  });
+});
+</script>

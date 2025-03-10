@@ -1,0 +1,635 @@
+.fake-italic {
+  display: inline-block; /* transform 사용 시 inline 요소에 필요 */
+  transform: skewX(-10deg);
+}
+
+.fira-sans-condensed-regular {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-sans-condensed-bold {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fira-sans-condensed-regular-italic {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fira-sans-condensed-bold-italic {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+.bold{
+  font-weight: bold;
+  font-family: "clarendon-wide-sketch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1em;
+  text-indent: 0%;
+}
+/* Hover Effects */
+.hover-word:hover {
+  /* font-weight: bolder; */
+  color: #39FF14;
+}
+
+
+/* 드래그된 텍스트 색상 */
+::selection {
+  background-color: #0F6600; /* 기본 드래그 색상 */
+  color: white;
+}
+
+
+/* Global cursor removal (Note: Consider revisiting for accessibility) */
+html, body, * {
+  cursor: none;
+  font-family: "clarendon-text-pro", serif;
+font-weight: 400;
+font-style: normal;
+}
+html{
+  width:100vw;
+}
+/* Link styles with focus for accessibility */
+a:link { color: black; }
+a:focus {
+  outline: 2px solid #39FF14;
+  outline-offset: 2px;
+}
+/* 커스텀 커서 (수평선) */
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 0.15em;
+  background-color: #39FF14;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* 수직선 스타일 */
+.vertical-line {
+  position: fixed;
+  width: 0.15em;
+  height: 100vh;
+  background-color: #39FF14;
+  top: 0;
+  display: none;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* 조준 원 스타일 */
+.crosshair {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #39FF14;
+  border-radius: 50%;
+  background: transparent;
+  display: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+
+/* Base Typography & Layout */
+body {
+  font-family: 'Noto Serif', serif;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding:0;
+  margin:0;
+}
+ /* 기본 설정: 전체 창 높이, 부드러운 스크롤, 스크롤바 숨김 */
+ body {
+  margin: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari 등 */
+}
+
+/* Global spacing for layout elements */
+ main, footer, section, aside { margin-bottom: 2em; }
+article { 
+  margin:9em 0; 
+  scroll-snap-align: start;
+}
+
+
+    /* ===== Navigation Container ===== */
+    nav {
+      
+      font-size: 0.75em !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;  /* max-height가 0일 때 내용이 보이지 않도록 */
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      max-height: 250px;   /* nav가 열렸을 때의 높이 (필요 시 조정) */
+      opacity: 1 !important;
+       z-index: 100000;
+    }
+    /* nav가 숨겨질 때: max-height 0, opacity 0 */
+    nav.hidden {
+      padding: 0%; /* 상하좌우 8% */
+      max-height: 10%;
+      opacity: 0;
+    }
+    /* keepVisible이 있으면 숨김 해제 */
+    nav.keepVisible {
+      max-height: 250px;
+      padding: 1% 3%; /* 상하좌우 8% */
+
+      opacity: 1;
+    }
+
+    /* ===== Navigation List Layout & Grouping ===== */
+    nav ul {
+      font-family: "clarendon-wide-sketch", sans-serif;
+font-weight: 200;
+font-style: normal;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    nav ul li {
+      margin-right: 1em;
+    }
+    /* 그룹 1: 첫번째 항목 (Introduction & Preface) - 별도 여백 없음 */
+    /* 그룹 2: 두번째 ~ 네번째 항목 (Chapters) - 첫번째 항목에 추가 왼쪽 여백 */
+    nav ul li.group-intro{
+      margin-right: 4em;
+    }
+
+    /* 그룹 3: 다섯번째, 여섯번째 항목 (Conclusion, Bibliography) - 그룹 2와 구분하기 위해 더 큰 여백 */
+    nav ul li.group-others {
+      margin-left: 4em;
+    
+    }
+
+    /* ===== Link Styles & Active State ===== */
+    nav ul li a {
+      text-decoration: none;
+      color: inherit;
+      opacity: 0.6;  /* 기본 60% */
+      transition: opacity 0.2s, color 0.2s, font-weight 0.2s !important;
+    }
+    nav ul li a.active {
+      font-family: "clarendon-wide-sketch", sans-serif;
+font-weight: 700;
+font-style: normal;
+      opacity: 1;
+      color: black !important;
+      
+    }
+
+    /* ===== Dynamic Background Colors ===== */
+    /* 섹션 순서에 따라 nav에 activeN 클래스를 추가 */
+    .active1 { background-color: #0F6600; }
+    .active2 { background-color: #0F6600; }
+    .active3 { background-color: #39FF14; } /* neon green */
+    .active4 { background-color: #39FF14; }
+    .active5 { background-color: black; }
+    .active6 { background-color: black; }
+    /* 다섯번째 항목(active)일 때 텍스트 색상을 off white로 변경 */
+    .active5 ul li.group-others a{
+      color: #f8f8f8;
+      opacity: 1;
+    }
+    .active5 ul li a,
+    .active6 ul li a {
+      color: #f8f8f8;
+      opacity: 1;
+    }
+
+
+
+/* header */
+header{
+  display: block;
+  background-color: #0F6600;
+  width:100vw;
+  height:100vh;
+  position: relative; /* 내부 요소의 상대적 배치를 위해 */
+}
+
+header h1 {
+  text-align: left;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* video in header */
+.video-wrapper {
+  --video-margin: 22vw;
+
+  position: absolute;
+  inset: var(--video-margin) var(--video-margin) 0;
+}
+.video-wrapper h1 
+{  position: absolute;
+  top: -38%;
+  left: 0%; 
+z-index: 10000000000;
+color:rgb(0, 0, 0);
+font-weight: 900;
+font-family: "clarendon-wide-sketch", sans-serif;
+
+}
+.video-wrapper p 
+{  position: absolute;
+  top: -30%;
+  left: 0%; 
+z-index: 10000000000;
+color:rgb(0, 0, 0);
+font-family: "clarendon-wide-sketch", sans-serif;
+font-weight: 200;
+font-style: normal;
+font-size:0.8em;
+}
+
+.video-wrapper > video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transition: all .5s;
+
+  object-position: center;
+  object-fit: cover;
+}
+.video-wrapper .portrait {
+  background-color: rgb(0, 0, 0);
+}
+.video-wrapper .landscape {
+  background-color: #39FF14;
+  display: none;
+}
+
+.video-wrapper .crosshair {
+  position: absolute;
+  top: 50%; left: 50%;
+  translate: -50% -50%;
+
+  
+  width: 400px;
+  height: 300px;
+}
+
+.video-wrapper .crosshair::before,
+.video-wrapper .crosshair::after {
+  position: absolute;
+  top: 50%; left: 50%;
+
+  content:'';
+
+  transition: all .5s;
+  background-color: white;
+}
+.video-wrapper .crosshair::before {
+  translate: -50% -50%;
+
+  width: 100vw;
+  height: 4px;
+}
+.video-wrapper .crosshair::after {
+  translate: -50% calc(-50% - var(--video-margin) / 2);
+  
+  width: 4px;
+  height: 0;
+}
+
+.video-wrapper .crosshair:hover::before,
+  .video-wrapper .crosshair:hover::after {
+  background-color:#39FF14;
+}
+.video-wrapper .crosshair:hover::after {
+  height: 100vh;
+}
+
+/* .video-wrapper.triggered video,
+.video-wrapper:has(.crosshair:hover) video {
+  width: 100%;
+  height: auto;
+  /* scale: .8; */
+
+
+@media screen and (min-aspect-ratio:  4 / 3) {
+  .video-wrapper .portrait { display: none }
+  .video-wrapper .landscape { display: block }
+}
+
+/*  */
+.therootsgrow{
+font-size: 1.4em;
+text-align: left;
+line-height: 1.5em;
+padding-bottom:1.5em;
+}
+/* Text utilities */
+.text-disc {
+  font-size: 0.75em;
+  text-indent: 0;
+  padding-bottom:2em;
+  line-height:1.28em;
+}
+
+h2{
+  line-height: 1.3em;
+}
+p {
+  text-align: justify;
+}
+.text-indent{
+  text-indent:5em;
+}
+/* Intro Section */
+
+/* intro는 배경이 full-width */
+#intro {
+  background-color: black;
+  color:#0F6600;
+  margin: auto;
+padding:1.3em 0;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black; /* 원하는 배경색 */
+}
+
+/* intro-content는 부모(main)의 콘텐츠 영역을 따라감 */
+.intro-content {
+  /* 부모 main의 콘텐츠 영역 너비는 100vw - (22%*2) 즉, 56vw가 됩니다. */
+  width: calc(100vw - 44vw);
+  margin: 0 auto;
+  padding: 1rem; /* 필요에 따라 여백 조정 */
+}
+
+
+/* Layout for content with sidenotes */
+.content-with-sidenote {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+}
+.sidenote p {
+  text-indent: 0;
+  text-align: left;
+  line-height: 1.28; /* 기본 p 태그의 행간을 20% 줄임 (1.6 → 1.28) */
+  padding-bottom:1em;
+padding-top:0.5em;
+}
+
+.sidenote p b,
+.sidenote p strong {
+  line-height: 1.04; /* bold 영역의 행간을 35% 줄임 (1.6 → 1.04) */
+}
+
+/* Section container */
+section {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* img chief */
+
+/* 동적으로 생성될 .palette 컨테이너 */
+.palette {
+  margin-top: 1em;
+}
+/* 팔레트 색점을 표시할 .dot */
+.dot {
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+/* 이미지와 캔버스 크기 */
+img, canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* figure 스타일 */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+  /*  */
+  main{
+margin: 0% 22%;
+height: 100vh;              /* 화면 전체 높이 */
+/* overflow-y: scroll;         수직 스크롤 활성화 */
+scroll-snap-type: y mandatory;  /* 수직 방향 스냅, 반드시 스냅됨 */
+  }
+
+.main-content {
+  flex: 2;
+  width: 75%;
+  margin-bottom: 1em;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.main_media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.main_media figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.main_media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Media chapter layout */
+.media_chapter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+}
+
+.media_chapter figure {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media_chapter img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sidenote styles */
+.sidenote {
+  flex: 0.7;
+  width: 25%;
+  margin: 0;
+  background-color: #f9f9f9;
+  font-size: 0.75em;
+  position: sticky;
+  top: 10px;
+}
+
+.sidenote p {
+  text-indent: 0;
+  text-align: left;
+}
+
+.sidenote img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+sup {
+  font-size: 0.8em;
+  vertical-align: super;
+  font-weight: 700;
+}
+/* Figure and caption defaults */
+figure {
+  display: block;
+  margin: 0;
+}
+.figcaption{font-size: 0.85em;
+  padding-top:0.4em;
+  padding-bottom: 2em;
+}
+.figcaption i{
+  font-weight: 700;
+}
+
+.main-content{
+}
+
+  /* 격자를 담을 최상위 컨테이너 */
+  /* 스크롤 전체 높이에 걸쳐서 절대 배치 */
+  #grid-container {
+    position: absolute;
+    top: 0vh; left: 0;
+    /* 실제 문서 높이에 맞춰 동적으로 조정할 예정 */
+    margin:0 50%;
+    pointer-events: none; /* 클릭 등 이벤트를 막지 않음 */
+    z-index: 9999; /* 다른 요소 위에 표시 */
+    font-family: "clarendon-wide-sketch", sans-serif;
+font-weight: 200;
+font-style: normal;
+font-size: 0.75em;
+  }
+
+  /* 왼쪽, 오른쪽 격자 구역 */
+  /* 각각 절대 배치하여 양옆에 고정, 내부에 라인/라벨 배치 */
+  .grid-side {
+    position: absolute;
+    top: 0; bottom: 0;
+    overflow: visible; /* 내부 요소가 넘칠 수 있게 */
+  }
+  /* 왼쪽 격자는 화면 왼쪽에, 7vh만큼 안쪽에 */
+  #grid-left {
+    left: 0;
+    margin-left: -62vh;
+    text-align: right; /* 라인을 오른쪽 정렬 */
+  }
+  /* 오른쪽 격자는 화면 오른쪽에, 7vh만큼 안쪽에 */
+  #grid-right {
+    right: 0;
+    margin-right: -62vh;
+    text-align: left; /* 라인을 왼쪽 정렬 */
+  }
+
+  /* 공통 라인 스타일: position absolute */
+  .grid-line {
+    position: absolute;
+    background-color: black;
+  }
+  /* 작은 격자 라인: height 0.25px, width 1.70em */
+  .small-line {
+    height: 0.08em;
+    width: 1.30em;
+  }
+  /* 큰 격자 라인: height 0.5em, width 2.70em */
+  .big-line {
+    height: 0.2em;
+    width: 2.5em;
+  }
+
+  /* 라벨 스타일 */
+  .grid-label {
+    position: absolute;
+    font-weight: bold;
+    transform-origin: 0 0; /* 회전 기준점을 왼쪽 상단으로 */
+
+  }
+  /* 왼쪽 라벨은 -90도 회전 */
+  .left-label {
+    transform: rotate(-360deg);
+    text-align: right;
+top:-5px;
+
+  }
+  /* 오른쪽 라벨은 90도 회전 */
+  .right-label {
+    transform: rotate(-360deg);
+    text-align: left;
+  }
+
+  
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+  }
+  header h1 {
+    font-size: 1.8em;
+    margin:0;
+  }
+  .content-with-sidenote {
+    flex-direction: column;
+  }
+}
