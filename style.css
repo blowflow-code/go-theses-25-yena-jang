@@ -57,6 +57,7 @@ html, body, * {
   font-family: "clarendon-text-pro", serif;
 font-weight: 400;
 font-style: normal;
+hyphens: auto;
 }
 html{
   width:100vw;
@@ -446,7 +447,7 @@ figure {
 
   /*  */
   main{
-margin: 0% 22%;
+margin: 0% 10%;
 height: 100vh;              /* 화면 전체 높이 */
 /* overflow-y: scroll;         수직 스크롤 활성화 */
 scroll-snap-type: y mandatory;  /* 수직 방향 스냅, 반드시 스냅됨 */
@@ -623,13 +624,20 @@ top:-5px;
 /* Responsive adjustments */
 @media (max-width: 600px) {
   body {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    padding: 0;
   }
   header h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin:0;
+  }
+  .main{
+    margin:0 5%;
   }
   .content-with-sidenote {
     flex-direction: column;
+  }
+  .main-content, .sidenote {
+    width: 100%;
   }
 }
