@@ -1,3 +1,5 @@
+
+
 .fake-italic {
   display: inline-block; /* transform 사용 시 inline 요소에 필요 */
   transform: skewX(-10deg);
@@ -27,15 +29,23 @@
   font-style: italic;
 }
 
-
+.line{
+  transform: translate(-50%);
+  display: block;
+  width:200vw;
+  height:0.5px;
+  background-color: black;
+  z-index: 999;
+  margin:0.6em 0;
+}
 
 .bold{
   font-weight: bold;
   font-family: "clarendon-wide-sketch", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1em;
   text-indent: 0%;
+
 }
 /* Hover Effects */
 .hover-word:hover {
@@ -103,7 +113,10 @@ a:focus {
   pointer-events: none;
   z-index: 10000;
 }
-
+h2{
+  font-size: 1.7em;
+  line-height: 1;
+}
 
 /* Base Typography & Layout */
 body {
@@ -114,30 +127,29 @@ body {
   line-height: 1.6;
   padding:0;
   margin:0;
+
 }
  /* 기본 설정: 전체 창 높이, 부드러운 스크롤, 스크롤바 숨김 */
  body {
   margin: 0;
   height: 100vh;
-  overflow-y: scroll;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
 }
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari 등 */
+  overflow-x:hidden;
 }
 
 /* Global spacing for layout elements */
  main, footer, section, aside { margin-bottom: 2em; }
 article { 
-  margin:9em 0; 
+  margin:17em 0; 
   scroll-snap-align: start;
 }
 
 
     /* ===== Navigation Container ===== */
     nav {
-      
+      padding:1% 3%;
       font-size: 0.75em !important;
       position: fixed;
       top: 0;
@@ -149,17 +161,11 @@ article {
       opacity: 1 !important;
        z-index: 100000;
     }
-    /* nav가 숨겨질 때: max-height 0, opacity 0 */
-    nav.hidden {
-      padding: 0%; /* 상하좌우 8% */
-      max-height: 10%;
-      opacity: 0;
-    }
+
     /* keepVisible이 있으면 숨김 해제 */
     nav.keepVisible {
       max-height: 250px;
       padding: 1% 3%; /* 상하좌우 8% */
-
       opacity: 1;
     }
 
@@ -224,7 +230,17 @@ font-style: normal;
       opacity: 1;
     }
 
+.fn{
+  background-color: #39FF14;
+  height:100%;
+}
+.fn:hover{
+  background-color: black;
 
+}
+.fn:active{
+  color:white;
+}
 
 /* header */
 header{
@@ -358,11 +374,14 @@ padding-bottom:1.5em;
   line-height:1.28em;
 }
 
-h2{
-  line-height: 1.3em;
-}
+
 p {
   text-align: justify;
+  text-align-last:left;
+  word-spacing: auto;
+  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 .text-indent{
   text-indent:5em;
@@ -447,10 +466,13 @@ figure {
 
   /*  */
   main{
-margin: 0% 10%;
+hyphens: auto;
+/* Numeric values */
+margin: 0% 21%;
 height: 100vh;              /* 화면 전체 높이 */
 /* overflow-y: scroll;         수직 스크롤 활성화 */
 scroll-snap-type: y mandatory;  /* 수직 방향 스냅, 반드시 스냅됨 */
+
   }
 
 .main-content {
@@ -463,13 +485,14 @@ scroll-snap-type: y mandatory;  /* 수직 방향 스냅, 반드시 스냅됨 */
 
 .main_media {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+flex-direction: row;
   align-items: center;
-  gap: 1em;
 }
 
 .main_media figure {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -482,9 +505,22 @@ scroll-snap-type: y mandatory;  /* 수직 방향 스냅, 반드시 스냅됨 */
   object-fit: contain;
 }
 
+
+/* parent_media_chapter */
+.parent_media_chapter{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.parent_media_chapter figure{
+  object-fit: cover;
+  background-color: aqua !important;
+height:20em;
+}
+
 /* Media chapter layout */
 .media_chapter {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -561,7 +597,7 @@ figure {
     font-family: "clarendon-wide-sketch", sans-serif;
 font-weight: 200;
 font-style: normal;
-font-size: 0.75em;
+font-size: 0.6em;
   }
 
   /* 왼쪽, 오른쪽 격자 구역 */
@@ -574,13 +610,13 @@ font-size: 0.75em;
   /* 왼쪽 격자는 화면 왼쪽에, 7vh만큼 안쪽에 */
   #grid-left {
     left: 0;
-    margin-left: -62vh;
+    margin-left: -60vh;
     text-align: right; /* 라인을 오른쪽 정렬 */
   }
   /* 오른쪽 격자는 화면 오른쪽에, 7vh만큼 안쪽에 */
   #grid-right {
     right: 0;
-    margin-right: -62vh;
+    margin-right: -60vh;
     text-align: left; /* 라인을 왼쪽 정렬 */
   }
 
@@ -620,7 +656,59 @@ top:-5px;
     text-align: left;
   }
 
-  
+  /* Custom scrollbar (Webkit-based: Chrome, Edge, Safari) */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222; /* dark gray track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #999; /* light gray thumb */
+    border: 4px solid #222; /* thick border gives it the capsule look */
+    border-radius: none;
+  }
+
+  ::-webkit-scrollbar-button:single-button {
+    background-color: #444;
+    display: block;
+    height: 16px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;utf8,<svg width='12' height='12' xmlns='http://www.w3.org/2000/svg'><polygon points='6,0 12,12 0,12' fill='gray'/></svg>");
+  }
+
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml;utf8,<svg width='12' height='12' xmlns='http://www.w3.org/2000/svg'><polygon points='0,0 12,0 6,12' fill='gray'/></svg>");
+  }
+
+  /* Firefox fallback */
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    scrollbar-width: auto;
+    scrollbar-color: #04ff00 #000000;
+  }
+  th, td {
+    border: 0.1px solid black;
+    text-align: left;
+    font-size: 80%;
+    line-height: 1.4em;
+    padding:0.3em;
+  }
+  td{
+    text-align: center;
+  }
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   body {
@@ -631,8 +719,16 @@ top:-5px;
     font-size: 2em;
     margin:0;
   }
+  main{
+    margin:0 0%;
+  }
   .main{
     margin:0 5%;
+  }
+  .sidenote{
+    font-size: 1em;
+    line-height: 1.5em;
+
   }
   .content-with-sidenote {
     flex-direction: column;
@@ -640,4 +736,25 @@ top:-5px;
   .main-content, .sidenote {
     width: 100%;
   }
+  #grid-container{
+    display: none;
+  }
+nav ul{
+  flex-direction: column;
+}
+nav ul li{
+  margin:0;!important
+}
+nav.hidden{
+  max-height: 1rem;
+}
+.figcaption{
+  font-size: 0.8em;
+}
+#bibliography{
+ font-size:0.8em; 
+}
+footer{
+  font-size:0.8em;
+}
 }

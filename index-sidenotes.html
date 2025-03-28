@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidenotes</title>
+  
+    <style>
+      *{
+        font-size:max(24px, 3vw);
+        color: rgba(0,0,0,0.9);
+      }
+      main{
+        width:50%;
+        margin-left:25%;
+        margin-top:1rem;
+        margin-bottom:1rem;
+      }
+      sup :target, footer :target {
+        border-radius:100%;
+        background-color: rgba(255, 200, 0, 0.75);
+        box-shadow: 0 0 0.5rem 0.5rem rgba(255, 200, 0, 0.75);
+        color:#F00;
+      }
+      .margin-note{
+        position:absolute;
+        display:inline;
+        width:25%;
+        right:0;
+        padding:1rem;
+        margin-top:-0.625rem;
+        box-sizing: border-box;
+        height: 0;
+      }
+      @media screen and (max-width: 780px){
+        .margin-note{
+          position:relative;
+          padding:0;
+          border:1px solid #F00;
+          border-radius:100%;
+        }
+      }
+    </style>
+
+</head>
+<body>
+
+  <main>
+
+    <h1>Footnotes</h1>
+
+    <article>
+      <p>
+
+        This is a footnote. <sup class="footnote"><a id="fnref-1" href="#fn-1">1</a></sup> 
+        
+        <span class="margin-note" id="fn-1" value="1">
+          1. Right here! 
+          <span class="footnotereverse">
+          <a href="#fnref-1">↩</a>
+        </span>
+        
+      </span> 
+          Consequat deserunt esse ipsum tempor irure. In sit reprehenderit nostrud culpa officia culpa. Irure pariatur ipsum qui dolore duis Lorem nisi voluptate. Dolor officia consectetur commodo consequat consequat fugiat occaecat voluptate. Proident fugiat occaecat anim quis et sit nostrud nisi esse. Excepteur aliquip officia cillum exercitation eiusmod et aliquip aliquip. Cillum cillum Lorem veniam laboris aliquip ex labore ut elit nisi non cupidatat.
+      </p>
+
+
+
+
+      <p>
+        Duis ipsum ullamco excepteur eiusmod ad nulla cupidatat exercitation. Here's another one. <sup class="footnote"><a id="fnref-2" href="#fn-2">2</a></sup> <span class="margin-note" id="fn-2" value="2">2. Yes, another one.
+          <span class="footnotereverse"><a href="#fnref-2">↩</a></span></span> Consectetur est nisi. Et qui culpa nulla sunt cupidatat nostrud dolore ipsum. Laboris laboris id do nisi. Tempor tempor voluptate quis fugiat proident. Aliquip consectetur nostrud do elit aliquip esse excepteur elit id tempor amet pariatur non. Dolor do veniam elit irure ipsum occaecat cillum esse veniam. Adipisicing quis laboris officia sunt reprehenderit Lorem laboris sint id adipisicing ipsum.
+      </p>
+      <p>
+        Est reprehenderit mollit occaecat. And, a third footnote in here.<sup class="footnote">
+          <a id="fnref-3" href="#fn-3">3</a></sup>  <span class="margin-note" id="fn-3" value="3">All good! <span class="footnotereverse"><a href="#fnref-3">↩</a></span></span> Eu Lorem nostrud culpa occaecat ipsum labore. Magna sint aute ad enim anim eu. Officia ut nostrud esse cillum culpa nulla amet occaecat ut eu. Deserunt aliquip dolor nostrud sit minim nisi Lorem minim pariatur.
+      </p>
+      <p>
+        Id fugiat ipsum occaecat esse reprehenderit eiusmod laborum ex labore veniam est. Elit pariatur consectetur ut dolore duis anim eu occaecat proident tempor veniam qui culpa. Laborum labore proident deserunt ex qui.
+      </p>
+      <p>
+        Id fugiat ipsum occaecat esse reprehenderit eiusmod laborum ex labore veniam est. Elit pariatur consectetur ut dolore duis anim eu occaecat proident tempor veniam qui culpa. Laborum labore proident deserunt ex qui.
+      </p>
+    </article>
+
+  </main>
+   
+</body>
+</html>
