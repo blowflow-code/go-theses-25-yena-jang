@@ -374,7 +374,6 @@ padding-bottom:1.5em;
   line-height:1.28em;
 }
 
-
 p {
   text-align: justify;
   text-align-last:left;
@@ -714,11 +713,14 @@ top:-5px;
   body {
     font-size: 1rem;
     padding: 0;
+    margin-left:7%;
+    margin-right:7%;
   }
   header h1 {
     font-size: 2em;
     margin:0;
   }
+
   main{
     margin:0 0%;
   }
@@ -729,6 +731,12 @@ top:-5px;
     font-size: 1em;
     line-height: 1.5em;
 
+  }
+  nav ul li.group-intro{
+    margin:0;
+  }
+  nav ul li.group-others{
+    margin: 0;
   }
   .content-with-sidenote {
     flex-direction: column;
